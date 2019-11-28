@@ -91,15 +91,17 @@ Acept.Rech.gen <- function(n,a,G,g,f,u){
   return(acept.vec)
 }
 
-
+# Distribution function of logistic distribution
 log.ver.fkt <- function(uni){
   return(-log(abs(1-uni)/uni))
 }
 
+# Density function of logistic distribution
 log.dicht.fkt <- function(x){
   return(exp(-x)/((1+exp(-x))**2))
 }
 
+# Density function of normal distribution
 nor.dicht.fkt <- function(x, mu, sigma){
   return(1/(sqrt(2*pi*sigma**2))*exp(-((x-mu)**2/(2*sigma**2))))
 }
