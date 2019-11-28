@@ -53,7 +53,7 @@ rv.norm.TCL <- function(n,u,k){
   norm.vec <- array(0,c(n,1))
   for(i in seq(1,n)){
     print(k*(i-1)+1)
-    norm.vec[i] <- (sum(u[(k*(i-1))+1:k*i])-k/2)/sqrt(k/12)
+    norm.vec[i] <- (sum(u[((k*(i-1))+1):(k*i)])-k/2)/sqrt(k/12)
   }
   return(norm.vec)
 }
